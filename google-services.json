@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "871893499303",
+    "firebase_url": "https://appstarwars-42c95.firebaseio.com",
+    "project_id": "appstarwars-42c95",
+    "storage_bucket": "appstarwars-42c95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871893499303:android:645d6bbab15efbcc",
+        "android_client_info": {
+          "package_name": "com.mandasoftma.AppStarWars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871893499303-1rllcmd5hcpd4fndq12lqia77s9uo1bj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfsQdSBXeWUmetfRmYP4I9PpTVU2s9e20"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

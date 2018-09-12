@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only (click)="CerrarPage()">
+              <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+          </button>
+      </ion-buttons>
+    <ion-title>Starships</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="home" padding>
+    <ion-card>
+        <ion-card-header><h1>Starships found</h1></ion-card-header>
+        <ion-card-content> 
+          <ion-list *ngFor="let Starship of regStarships">
+              <ion-list *ngFor="let ss of Starship.results">
+                  <ion-card>
+                  <ion-card-header>
+                        <span>
+                            <ion-label stacked>Name/Model:</ion-label>
+                            <a href="#" (click)="onModalPage(
+                              'information starship ' + ss.name,'Model: '+ ss.model,'manufacturer: '+ss.manufacturer+'\r\ncost in credits:'+ss.cost_in_credits+'\r\nlength: '+ ss.length+'\r\nCrew: '+ss.crew +'\r\nPassengers: '+ss.passengers +'\r\nCargo_capacity: '+ ss.cargo_capacity + '\r\nConsumables: '+ss.consumables + '\r\nHyperdrive_rating: '+ss.hyperdrive_rating+ '\r\nMGLT: '+ ss.MGLT + '\r\nStarship_class: '+ ss.starship_class)"
+                              >{{ss.name}} / {{ ss.model}}</a>
+                       </span>
+                  </ion-card-header> 
+                </ion-card>
+              </ion-list> 
+        </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

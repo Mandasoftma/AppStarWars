@@ -1,0 +1,30 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ Reg.title }}</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="CerrarModal()">
+           <ion-icon ios="ios-close" md="md-close"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  padding>
+    <ion-item>
+      <ion-card-header>
+        <h1>{{ Reg.subTitle }}</h1>
+      </ion-card-header>
+    </ion-item>
+    <ion-item>
+      <pre>{{ Reg.message }}</pre>
+    </ion-item>
+    <br/>
+    <div padding>
+      <button ion-button block (click)="CerrarModal()" >{{ Reg.buttons }}</button>
+    </div>
+
+</ion-content>

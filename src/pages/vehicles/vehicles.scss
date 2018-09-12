@@ -1,0 +1,50 @@
+page-vehicles {
+    .home {
+        background-color: black;
+        color:white;
+    }    
+   
+    a {
+        color: #346ec5;
+        font-size: 1.05em;
+        font-style: oblique;
+        //font-weight: bold;
+    }
+
+    /*Menu Home*/
+    .home .container {
+        height: 98%;
+    }
+    .home .container .sub-container {
+        height: 75%;
+        padding: 0;
+    }
+    .home .container .sub-container a {
+        float: left;
+        margin-top: 5%;
+        padding: 65px 1% 40px 1%;
+        text-align: center;
+        text-decoration: none;
+        font-family: "CenturyGothic-Bold";
+        border:1px solid #9E9E9E;
+        height: 30px;
+        width: 42.5%;
+        /*width: 90%;*/
+    }
+    .home .container .sub-container a:nth-child(odd) {
+        /*margin-left: 2.5%;*/
+        margin-left:5%;
+        margin-right:5%;
+    }
+    .home a.secure {
+        margin-top: -3px;
+        height: 38px;
+        float: left;
+    }
+    .home section:last-child a:last-child {
+        float: right;
+        margin-right: 15px;
+        margin-top: 6px;
+    }
+    /****** Home End *******/
+}

@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+        <button ion-button icon-only (click)="CerrarPage()">
+            <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>Peliculas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="home">
+    <ion-card>
+        <ion-card-header><h1>Peliculas encontradas</h1></ion-card-header>
+        <ion-card-content> 
+          <ion-list *ngFor="let book of regfilms">
+              <ion-list *ngFor="let film of book.results">
+                  <ion-card>
+                  <ion-card-header>
+                        <span>
+                            <ion-label stacked>Titulo/Episodio:</ion-label>{{film.title}} / {{ film.episode_id}}
+                       </span>
+                       <span>
+                          <ion-label stacked>Director: </ion-label><a href="#"(click)="onModalPage(
+                              'Informacion del director ' + film.director, 'Capitulo : '+film.title+' episodio '+ film.episode_id,film.opening_crawl)">
+                              {{ film.director}}</a> 
+                       </span>
+                       <span>
+                          <ion-label stacked>Productores: </ion-label><a href="#"> {{ film.producer}}</a>
+                       </span>
+                       <ion-card-header><h1>Movie's characters</h1></ion-card-header>
+                       <ion-list *ngFor="let p of film.characters;let i = index">
+                        <span>
+                            <ion-label stacked>Personajes: </ion-label><a href="#" (click)="getQuery(
+                                'Informacion del personaje ' + 'people ' +(i+1) , 'Capitulo : '+film.title+' episodio '+ film.episode_id,p)"> 
+                                People {{ i+1 }}</a>
+                        </span>
+                       </ion-list>
+                       
+                  </ion-card-header> 
+                </ion-card>
+              </ion-list>
+        </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
